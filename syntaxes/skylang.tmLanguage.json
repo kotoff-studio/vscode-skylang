@@ -1,14 +1,48 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "SkyLang",
+	"scopeName": "source.sl",
+	"fileTypes": [".sl", ".slc"],
 	"patterns": [
 		{
-			"include": "#keywords"
+			"include": "#registers"
+		},
+		{
+			"include": "#commands"
+		},
+		{
+			"include": "#numbers"
 		},
 		{
 			"include": "#strings"
-		}
-	],
+		},
+		{
+			"include": "#sections"
+		},
+		{
+			"name": "storage.type",
+			"match": "(\\t| )(Integer|String|Character|LongInteger)(\\t| )",
+			"captures": {
+				"1": { "name": "storage.type" }
+			},
+			"comment": "Data types and much more"
+		},
+		{
+			"name": "keyword.control",
+			"match": "^[\\t| ]{0,}(Require|Include|Function|Variable|NullReturn|Return|NullPointer|Ptr)\\b"
+		},
+		{
+			"name": "keyword.control",
+			"match": "(\\[|\\]|,|:|\\+|-|\\*|/)",
+			"comment": "Simbols"
+		},
+		{
+			"name": "support.function.constant",
+			"match": "\\b[A-Z]{1,1}[_A-Z0-9]{0,}\\b",
+			"captures": {
+				"0": { "name": "support.function.constant" }
+			},
+			"comment": "Define"
+		}],
 	"repository": {
 		"keywords": {
 			"patterns": [{
@@ -27,6 +61,5 @@
 				}
 			]
 		}
-	},
-	"scopeName": "source.sl"
+	}
 }
