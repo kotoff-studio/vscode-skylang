@@ -1,0 +1,25 @@
+{
+  "name": "vscode-skylang",
+  "displayName": "vscode-skylang",
+  "description": "SkyLang support for VS Code",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.78.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "skylang",
+      "aliases": ["SkyLang", "skylang"],
+      "extensions": [".sl",".slc"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "skylang",
+      "scopeName": "source.sl",
+      "path": "./syntaxes/skylang.tmLanguage.json"
+    }]
+  }
+}
