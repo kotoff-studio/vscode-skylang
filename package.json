@@ -2,6 +2,7 @@
   "name": "vscode-skylang",
   "displayName": "vscode-skylang",
   "description": "SkyLang support for VS Code",
+  "publisher": "kotoff-studio",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.78.0"
@@ -9,6 +10,7 @@
   "categories": [
     "Programming Languages"
   ],
+  "repository": "https://github.com/kotoff-studio/vscode-skylang",
   "contributes": {
     "languages": [{
       "id": "skylang",
